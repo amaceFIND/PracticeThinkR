@@ -15,25 +15,25 @@ library(testthat)
 
 # My function
 
-```{r function-my_fun}
-#' my_fun Title
+```{r function-Hello}
+#' Hello Title
 #'
-#' @return 1
+#' @return Message Hello
 #' @export
 #'
 #' @examples
-my_fun <- function() {
-  1
+Hello <- function() {
+  message("Hello")
 }
 ```
 
-```{r examples-my_fun}
-my_fun()
+```{r examples-Hello}
+Hello()
 ```
 
-```{r tests-my_fun}
-test_that("my_fun works", {
-
+```{r tests-Hello}
+test_that("Hello works", {
+  expect_message(Hello(), 'Hello')
 })
 ```
 
