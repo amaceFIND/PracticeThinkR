@@ -29,5 +29,7 @@ library(PracticeThinkR)
 
 ```{r examples-Hello}
 Hello()
+Hello(MyMessage = 'Bonjour')
+
 ```
 

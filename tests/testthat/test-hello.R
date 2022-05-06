@@ -2,4 +2,5 @@
 
 test_that("Hello works", {
   expect_message(Hello(), 'Hello')
+  expect_message(Hello(MyMessage = 'Bonjour'), 'Bonjour')
 })

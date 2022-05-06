@@ -2,16 +2,21 @@
 % Please edit documentation in R/hello.R
 \name{Hello}
 \alias{Hello}
-\title{Hello Title}
+\title{Hello}
 \usage{
-Hello()
+Hello(MyMessage = "Hello")
+}
+\arguments{
+\item{MyMessage}{String corresponding to the message to display}
 }
 \value{
-Message Hello
+a Message
 }
 \description{
-Hello Title
+Hello
 }
 \examples{
 Hello()
+Hello(MyMessage = 'Bonjour')
+
 }

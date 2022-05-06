@@ -16,24 +16,29 @@ library(testthat)
 # My function
 
 ```{r function-Hello}
-#' Hello Title
+
+#' Hello
 #'
-#' @return Message Hello
+#' @param MyMessage String corresponding to the message to display
+#'
+#' @return a Message
 #' @export
 #'
-#' @examples
-Hello <- function() {
-  message("Hello")
+Hello <- function(MyMessage = 'Hello') {
+  message(MyMessage)
 }
 ```
 
 ```{r examples-Hello}
 Hello()
+Hello(MyMessage = 'Bonjour')
+
 ```
 
 ```{r tests-Hello}
 test_that("Hello works", {
   expect_message(Hello(), 'Hello')
+  expect_message(Hello(MyMessage = 'Bonjour'), 'Bonjour')
 })
 ```
 
